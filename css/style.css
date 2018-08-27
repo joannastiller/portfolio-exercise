@@ -1,0 +1,468 @@
+/*
+    
+
+    font-family: 'Saira', sans-serif;
+
+    font-family: 'Saira Condensed', sans-serif;
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.wraper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background-color: #29a6dc;
+    overflow: hidden;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 48%;
+}
+
+header div.me {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+header h2 {
+    margin-top: -5px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+header button {
+    margin-top: 40px;
+    padding: 0 20px;
+    line-height: 32px;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+
+
+/*USTAWIENIA DLA TRYBU PORTRAIT*/
+
+@media (orientation: landscape) {
+
+    header img {
+        height: 60%;
+        bottom: 0;
+        right: -5px;
+    }
+
+    header div.me {
+        top: 17%;
+        left: 7%;
+        right: 50%;
+    }
+
+    header button {
+        margin-top: 40px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+    header img {
+        height: 46%;
+    }
+
+    header div.me {
+        top: 13%;
+        font-size: 50px;
+    }
+
+    header div h1,
+    header div h2 {
+        font-size: 30px;
+    }
+
+    header button {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    header img {
+        height: 54%;
+    }
+
+    header div.me {
+        top: 13%;
+        font-size: 70px;
+    }
+
+    header div h1,
+    header div h2 {
+        font-size: 45px;
+    }
+
+    header h2 {
+        margin-top: -15px;
+    }
+
+    header button {
+        font-size: 25px;
+        line-height: 40px;
+        padding: 0 30px;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 800px) {
+    header img {
+        height: 50%;
+    }
+
+    header div.me {
+        top: 17%;
+        font-size: 70px;
+    }
+
+    header div h1,
+    header div h2 {
+        font-size: 45px;
+    }
+
+    header h1 {
+        margin-top: 50px;
+    }
+
+    header h2 {
+        margin-top: -15px;
+    }
+
+    header button {
+        font-size: 25px;
+        line-height: 40px;
+        margin-top: 80px;
+    }
+
+}
+
+
+/*USTAWIENIA DLA TRYBU LANDSCAPE*/
+
+@media (orientation: landscape) and (min-width: 640px) {
+
+    header div.me {
+        left: 10%;
+    }
+    header img {
+        height: 60%;
+        right: 0;
+    }
+
+    header h2 {
+        margin-top: -10px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    header img {
+        height: 54%;
+    }
+
+    header div.me {
+        top: 25%;
+        left: 5%;
+        font-size: 70px;
+    }
+
+    header div h1,
+    header div h2 {
+        font-size: 45px;
+    }
+
+    header h1 {
+        margin-top: 40px;
+    }
+
+    header h2 {
+        margin-top: -15px;
+    }
+
+    header button {
+        font-size: 25px;
+        line-height: 50px;
+        margin-top: 80px;
+        padding: 0 40px;
+
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    header img {
+        height: 80%;
+    }
+
+    header div.me {
+        top: 20%;
+        left: 10%;
+        font-size: 70px;
+        text-align: left;
+    }
+
+    header div h1,
+    header div h2 {
+        font-size: 45px;
+    }
+
+    header h1 {
+        margin-top: 40px;
+    }
+
+    header h2 {
+        margin-top: -15px;
+    }
+
+    header button {
+        font-size: 25px;
+        line-height: 50px;
+        margin-top: 80px;
+
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    header img {
+        height: 80%;
+    }
+
+    header div p {
+        font-size: 120px;
+
+    }
+
+    header div h1,
+    header div h2 {
+        font-size: 60px;
+    }
+
+    header h1 {
+        margin-top: 40px;
+    }
+
+    header h2 {
+        margin-top: -15px;
+    }
+
+    header button {
+        font-size: 30px;
+        line-height: 60px;
+        margin-top: 80px;
+
+    }
+}
+
+
+@media (min-width: 1024px) {
+    header button {
+        cursor: pointer;
+        transition: .3s;
+    }
+    header button:hover {
+        background-color: #fff;
+        color: #29a6dc;
+    }
+}
+
+/*    SEKCJA 1*/
+
+.features {
+    max-width: 1600px;
+    margin-top: 5% auto 0 auto;
+    padding: 7%;
+    text-align: center;
+}
+
+.features img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.features h1 {
+
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.features h2 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.features p {
+    margin-top: 20px;
+    font-family: 'Saira', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+
+@media (orientation: landscape) and (min-width: 360px) {
+    .features img {
+        width: 80%;
+    }
+    .features h1 {
+        font-size: 28px;
+    }
+
+    .features h2 {
+        font-size: 20px;
+    }
+    .features p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .features img {
+        width: 70%;
+    }
+    .features h1 {
+        font-size: 40px;
+    }
+
+    .features h2 {
+        font-size: 24px;
+    }
+    .features p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .features {
+        margin-top: 50px;
+        padding: 0 3%;
+    }
+
+    .feature {
+        width: 33.33%;
+        padding: 0 2%;
+        float: left;
+    }
+
+    .features h1 {
+        margin-bottom: 30px;
+        font-size: 50px;
+    }
+
+    .features p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .feature {
+        padding: 0 4%;
+    }
+    .features h1 {
+        font-size: 60px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+    .features p {
+        font-size: 18px;
+    }
+}
+
+
+/*PROJECTS*/
+
+section.projects {
+    background-color: black;
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+}
+
+.projects .web img {
+    width: 100%;
+
+}
+
+.projects h1 {
+    padding: 15px 10px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.projects . description {
+    padding: 10px 20px 20px 0;
+}
+
+.projects .description h2 {
+    padding: 0 10px 0 20px;
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+.projects .description p {
+    padding: 10px 10px 20px 20px;
+    font-family: 'Saira', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.projects div:nth-of-type(odd) {
+    background-color: orange;
+}
+
+.projects .project:nth-of-type(even) {
+    background-color: #29a6dc;
+}
+
+.projects .project {
+    margin-bottom: 20px;
+}
