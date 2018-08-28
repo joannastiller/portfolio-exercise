@@ -325,7 +325,7 @@ header button {
 .features h1 {
 
     font-family: 'Saira Condensed', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     text-transform: uppercase;
 }
 
@@ -419,9 +419,15 @@ header button {
 /*PROJECTS*/
 
 section.projects {
+    padding: 0 0 2px 0;
     background-color: black;
     font-family: 'Saira Condensed', sans-serif;
     color: white;
+}
+
+.projects .project {
+    max-width: 1400px;
+    margin-bottom: 20px;
 }
 
 .projects .web img {
@@ -437,14 +443,17 @@ section.projects {
     text-align: center;
 }
 
-.projects . description {
+.projects .description {
     padding: 10px 20px 20px 0;
 }
 
 .projects .description h2 {
-    padding: 0 10px 0 20px;
+    padding: 0 10px 5px 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     font-size: 18px;
     font-weight: normal;
+    border-bottom: 2px solid white;
 
 }
 
@@ -455,7 +464,7 @@ section.projects {
     font-size: 12px;
 }
 
-.projects div:nth-of-type(odd) {
+.projects .project:nth-of-type(odd) {
     background-color: orange;
 }
 
@@ -463,6 +472,280 @@ section.projects {
     background-color: #29a6dc;
 }
 
-.projects .project {
-    margin-bottom: 20px;
+
+
+
+/*ORIENTATION PORTRAIT*/
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .projects h1 {
+        font-size: 40px;
+    }
+    .projects .description h2 {
+        padding-left: 40px;
+        font-size: 24px;
+    }
+    .projects .description p {
+        padding-left: 40px;
+        font-size: 16px;
+    }
+}
+
+/*ORIENTATION LANDSCAPE*/
+
+@media (orientation: landscape) {
+    .web,
+    .description {
+        width: 50%;
+        float: left;
+    }
+
+    .web img {
+        display: block;
+    }
+
+    .projects .description {
+        padding-bottom: 0;
+    }
+
+    .projects .description h2 {
+        margin-bottom: 5px;
+    }
+
+    .projects .project:nth-of-type(even) .web {
+        float: right;
+    }
+
+    .projects .project:nth-of-type(even) .description {
+        padding-right: 0;
+    }
+
+    .projects .project:nth-of-type(even) .description h2 {
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    .projects .project:nth-of-type(even) .description p {
+        padding-right: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .projects {
+        margin-top: 40px;
+    }
+    .projects h1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 50px;
+
+    }
+    .projects .description h2 {
+        margin-bottom: 15px;
+        margin-top: 20px;
+        padding-left: 40px;
+        font-size: 28px;
+    }
+
+    .projects .project:nth-of-type(even) .description {
+        padding-right: 0;
+    }
+    .projects .project:nth-of-type(even) .description h2 {
+        margin-left: 40px;
+        margin-right: 0;
+
+
+    }
+
+    .projects .description p {
+        padding-left: 40px;
+        font-size: 16px;
+    }
+}
+
+
+/*MOTTO*/
+
+.motto {
+    background-image: url(../images/motto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+.dark {
+    background-color: rgba(21, 110, 153, .4);
+    padding: 50px 10px;
+}
+
+.motto h1 {
+    margin-bottom: 50px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.motto p {
+    padding: 10px 10px 10px 10px;
+    font-family: 'Saira', sans-serif;
+    font-size: 16px;
+}
+
+.motto p.author {
+    margin-top: 0;
+    font-size: 11px;
+}
+
+@media (orientation: landscape) {
+    .motto p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        ;
+    }
+}
+
+@media (min-width:768px) {
+
+    .dark {
+        padding-bottom: 80px;
+    }
+    .motto h1 {
+        font-size: 40px;
+    }
+    .motto p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+    }
+
+    .motto p.author {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .motto h1 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .dark {
+        padding-bottom: 100px;
+    }
+    .motto h1 {
+        margin-top: 80px;
+    }
+
+    .motto p {
+        max-width: 60%;
+        padding-bottom: 20px;
+    }
+}
+
+
+/*HOBBY*/
+
+.hobby {
+    text-align: center;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.hobby h1 {
+    padding: 20px 5px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.hobby .item {
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hobby .item:nth-of-type(1) {
+    background-image: url(../images/hobby2.jpg);
+}
+
+.hobby .item:nth-of-type(2) {
+    background-image: url(../images/hobby1.jpg);
+}
+
+.hobby .item:nth-of-type(3) {
+    background-image: url(../images/hobby3.jpg);
+}
+
+.hobby .item:nth-of-type(4) {
+    background-image: url(../images/books.jpg);
+}
+
+.hobby .item p {
+    font-family: 'Saira', sans-serif;
+    font-size: 18px;
+    color: white;
+    line-height: 25vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 532px) {
+    .hobby .item {
+        float: left;
+        width: 50%;
+        height: 40vh;
+    }
+
+    .hobby .item p {
+        line-height: 40vh;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .hobby h1 {
+        font-size: 40px;
+    }
+
+    .hobby .item {
+        height: 30vh;
+    }
+
+    .hobby .item p {
+        line-height: 30vh;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hobby h1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 50px;
+    }
+
+    .hobby .item {
+        background-size: 100%;
+        transition: 0.6s;
+    }
+
+    .hobby .item p {
+        opacity: 0;
+        transition: 0.6s;
+        cursor: default;
+    }
+
+    .hobby .item:hover p {
+        opacity: 1;
+    }
+
+    .hobby .item:hover {
+        background-size: 110%;
+    }
 }
