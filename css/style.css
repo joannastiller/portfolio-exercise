@@ -749,3 +749,176 @@ section.projects {
         background-size: 110%;
     }
 }
+
+/*CONTACT*/
+
+.contact {
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+}
+
+.contact h1 {
+    padding: 30px 10px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contactWrap {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+}
+
+.contactWrap form > * {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Saira', sans-serif;
+    font-size: 12px;
+}
+
+.contact input {
+    padding-left: 10px;
+    height: 30px;
+}
+
+.contact textarea {
+    padding-left: 10px;
+    padding-top: 8px;
+    min-height: 30vh;
+}
+
+.contact button {
+    height: 40px;
+    background-color: transparent;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.some {
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.some .social {
+    padding-bottom: 15px;
+    font-family: 'Saira condensed', sans-serif;
+    font-size: 16px;
+}
+
+.some .social img {
+    float: left;
+}
+
+.some .social span {
+    padding-left: 10px;
+    float: left;
+    line-height: 72px;
+}
+
+@media (min-width: 533px) {
+    .contact .social {
+        display: inline-block;
+        width: 49%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contact h1 {
+        font-size: 40px;
+    }
+
+    .contact input,
+    .contact textarea {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .contact button {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .contact .social span {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contact h1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 50px;
+    }
+
+    .contact input,
+    .contact textarea {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .contact form,
+    .contact .some {
+        float: left;
+        width: 50%;
+
+    }
+
+    .contact button {
+        font-size: 22px;
+        transition: .4s;
+        cursor: pointer;
+    }
+
+    .contact button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .contact .some {
+        padding-left: 30px;
+        padding-top: 0;
+
+    }
+
+    .contact .social {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+/*FOOTER*/
+
+footer p {
+    background-color: #29a6dc;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    footer p {
+        font-size: 20px;
+        line-height: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    footer p {
+        font-size: 28px;
+        line-height: 90px;
+    }
+}
