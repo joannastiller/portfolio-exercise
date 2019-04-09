@@ -28,15 +28,7 @@
 header {
     position: relative;
     height: 100vh;
-    background-color: #29a6dc;
-    overflow: hidden;
-}
-
-header img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 48%;
+    background: url("../images/notebook.jpg") no-repeat center/cover fixed;
 }
 
 header div.me {
@@ -99,7 +91,7 @@ header button {
     }
 }
 
-@media (orientation: portrait) and (min-width: 360px) {
+@media (orientation: portrait) and (min-width: 368px) {
     header img {
         height: 46%;
     }
@@ -187,6 +179,7 @@ header button {
     header div.me {
         left: 10%;
     }
+
     header img {
         height: 60%;
         right: 0;
@@ -302,9 +295,10 @@ header button {
         cursor: pointer;
         transition: .3s;
     }
+
     header button:hover {
         background-color: #fff;
-        color: #29a6dc;
+        color: #7AA191;
     }
 }
 
@@ -348,6 +342,7 @@ header button {
     .features img {
         width: 80%;
     }
+
     .features h1 {
         font-size: 28px;
     }
@@ -355,6 +350,7 @@ header button {
     .features h2 {
         font-size: 20px;
     }
+
     .features p {
         font-size: 14px;
     }
@@ -364,6 +360,7 @@ header button {
     .features img {
         width: 70%;
     }
+
     .features h1 {
         font-size: 40px;
     }
@@ -371,6 +368,7 @@ header button {
     .features h2 {
         font-size: 24px;
     }
+
     .features p {
         font-size: 16px;
     }
@@ -403,6 +401,7 @@ header button {
     .feature {
         padding: 0 4%;
     }
+
     .features h1 {
         font-size: 60px;
     }
@@ -410,6 +409,7 @@ header button {
     .features h2 {
         font-size: 28px;
     }
+
     .features p {
         font-size: 18px;
     }
@@ -481,10 +481,12 @@ section.projects {
     .projects h1 {
         font-size: 40px;
     }
+
     .projects .description h2 {
         padding-left: 40px;
         font-size: 24px;
     }
+
     .projects .description p {
         padding-left: 40px;
         font-size: 16px;
@@ -494,6 +496,7 @@ section.projects {
 /*ORIENTATION LANDSCAPE*/
 
 @media (orientation: landscape) {
+
     .web,
     .description {
         width: 50%;
@@ -534,12 +537,14 @@ section.projects {
     .projects {
         margin-top: 40px;
     }
+
     .projects h1 {
         padding-top: 30px;
         padding-bottom: 30px;
         font-size: 50px;
 
     }
+
     .projects .description h2 {
         margin-bottom: 15px;
         margin-top: 20px;
@@ -550,6 +555,7 @@ section.projects {
     .projects .project:nth-of-type(even) .description {
         padding-right: 0;
     }
+
     .projects .project:nth-of-type(even) .description h2 {
         margin-left: 40px;
         margin-right: 0;
@@ -612,9 +618,11 @@ section.projects {
     .dark {
         padding-bottom: 80px;
     }
+
     .motto h1 {
         font-size: 40px;
     }
+
     .motto p {
         max-width: 80%;
         margin-left: auto;
@@ -638,6 +646,7 @@ section.projects {
     .dark {
         padding-bottom: 100px;
     }
+
     .motto h1 {
         margin-top: 80px;
     }
@@ -773,7 +782,7 @@ section.projects {
     padding: 0 30px;
 }
 
-.contactWrap form > * {
+.contactWrap form>* {
     width: 100%;
     margin-bottom: 20px;
     font-family: 'Saira', sans-serif;
