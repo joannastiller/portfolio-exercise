@@ -12,12 +12,14 @@
 
 <body>
     <div class="wraper">
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <header>
             <div class="me">
                 <p>cześć!</p>
                 <h1>Joanna Stiller</h1>
                 <h2>web developerka</h2>
-                <button>zobacz moje portfolio</button>
+                <a href="#myProjects"><button>zobacz moje portfolio</button></a>
             </div>
         </header>
         <section class="features clearfix">
@@ -47,7 +49,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="myProjects" class="projects">
 
             <h1>Moje projekty</h1>
 
@@ -163,9 +165,27 @@
     <script src="jquery-3.3.1.min.js"></script>
     <script>
         $('div.me button').on('click', function () {
-                    $('body, html').animate({
-                        scrollTop: $("#" + $(this).attr('class')).offset().top
-                    }, 1000)
+            $('body, html').animate({
+                scrollTop: $("#" + $(this).attr('class')).offset().top
+            }, 1000)
+        })
+        // Przycisk powrotu na górę strony - pokazuje się po przeskrollowaniu 20px
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // Dla Safari
+            document.documentElement.scrollTop = 0; // Dla Chrome, Firefox, IE i Opery
+        }
     </script>
 </body>
 
