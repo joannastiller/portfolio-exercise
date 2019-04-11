@@ -38,19 +38,18 @@
     color: white;
     cursor: pointer;
     padding: 15px;
-    border-radius: 5px;
     font-size: 18px;
 }
 
 #myBtn:hover {
     background-color: #555;
-    /* Add a dark-grey background on hover */
 }
 
 header {
     position: relative;
     height: 100vh;
-    background: url("../images/notebook.jpg") no-repeat center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)), url("../images/notebook.jpg") no-repeat center/cover fixed;
 }
 
 header div.me {
@@ -92,34 +91,16 @@ header button {
 
 
 
-/*USTAWIENIA DLA TRYBU PORTRAIT*/
+/*USTAWIENIA DLA URZĄDZEŃ MOBILNYCH*/
 
-@media (orientation: landscape) {
+@media (orientation: portrait) and (max-width: 768px) {
 
-    header img {
-        height: 60%;
-        bottom: 0;
-        right: -5px;
+    header {
+        background-position: 100% 0%;
     }
 
     header div.me {
-        top: 17%;
-        left: 7%;
-        right: 50%;
-    }
-
-    header button {
-        margin-top: 40px;
-    }
-}
-
-@media (orientation: portrait) and (min-width: 368px) {
-    header img {
-        height: 46%;
-    }
-
-    header div.me {
-        top: 13%;
+        top: 20%;
         font-size: 50px;
     }
 
@@ -129,16 +110,16 @@ header button {
     }
 
     header button {
+        /* margin-top: 20vh; */
+        background-color: #fff;
+        color: #7AA191;
         font-size: 18px;
         line-height: 36px;
     }
 
 }
 
-@media (orientation: portrait) and (min-width: 768px) {
-    header img {
-        height: 54%;
-    }
+@media (orientation: portrait) and (min-width: 769px) {
 
     header div.me {
         top: 13%;
@@ -163,9 +144,6 @@ header button {
 }
 
 @media (orientation: portrait) and (min-width: 800px) {
-    header img {
-        height: 50%;
-    }
 
     header div.me {
         top: 17%;
@@ -196,15 +174,23 @@ header button {
 
 /*USTAWIENIA DLA TRYBU LANDSCAPE*/
 
+@media (orientation: landscape) {
+
+    header div.me {
+        top: 17%;
+        left: 7%;
+        right: 50%;
+    }
+
+    header button {
+        margin-top: 40px;
+    }
+}
+
 @media (orientation: landscape) and (min-width: 640px) {
 
     header div.me {
         left: 10%;
-    }
-
-    header img {
-        height: 60%;
-        right: 0;
     }
 
     header h2 {
@@ -213,9 +199,6 @@ header button {
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
-    header img {
-        height: 54%;
-    }
 
     header div.me {
         top: 25%;
@@ -247,9 +230,6 @@ header button {
 }
 
 @media (orientation: landscape) and (min-width: 1280px) {
-    header img {
-        height: 80%;
-    }
 
     header div.me {
         top: 20%;
@@ -281,9 +261,6 @@ header button {
 }
 
 @media (orientation: landscape) and (min-width: 1600px) {
-    header img {
-        height: 80%;
-    }
 
     header div p {
         font-size: 120px;
@@ -835,6 +812,11 @@ section.projects {
 .some {
     padding-top: 20px;
     padding-left: 15px;
+}
+
+.some a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .some .social {
